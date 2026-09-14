@@ -10,10 +10,8 @@ export class CreateProduct {
     ){}
 
     
-    async execute(description:String,price:number,stock:number):Promise<void>{
-
-        await this.productRepository.create
-
+    async execute(name:string,description:String,price:number,stock:number):Promise<void>{
+        
     }
 
 }
