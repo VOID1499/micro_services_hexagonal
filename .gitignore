@@ -10,3 +10,18 @@
 /catalog_service/windsurf
 /catalog_service/coverage/
 /catalog_service/db-data/
+
+
+
+/order_service/dist
+
+/order_service/node_modules/
+# Keep environment variables out of version control
+/order_service/.env
+
+/order_service/src/generated/prisma
+/order_service/agents/
+/order_service/claude/
+/order_service/windsurf
+/order_service/coverage/
+/order_service/db-data/
