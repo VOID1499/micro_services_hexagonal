@@ -1,20 +1,30 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
- 
-  preset:"ts-jest",
   clearMocks: true,
-  collectCoverage:true,
-  verbose:true,
-  coverageDirectory:"coverage",
-  coveragePathIgnorePatterns:["/node_modules"],
-  coverageProvider:"v8",
-  moduleDirectories:["node_modules","src"]
+  collectCoverage: true,
+  verbose: true,
+
+  coverageDirectory: "coverage",
+  coveragePathIgnorePatterns: ["/node_modules"],
+  coverageProvider: "v8",
+
+  moduleDirectories: ["node_modules", "src"],
+
+  transform: {
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        useESM: true
+      }
+    ]
+  },
+
+  extensionsToTreatAsEsm: [".ts"],
+
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  }
 };
 
 export default config;

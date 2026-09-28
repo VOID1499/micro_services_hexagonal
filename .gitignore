@@ -1,1 +1,12 @@
 /catalog_service/dist
+
+/catalog_service/node_modules/
+# Keep environment variables out of version control
+/catalog_service/.env
+
+/catalog_service/src/generated/prisma
+/catalog_service/agents/
+/catalog_service/claude/
+/catalog_service/windsurf
+/catalog_service/coverage/
+/catalog_service/db-data/
