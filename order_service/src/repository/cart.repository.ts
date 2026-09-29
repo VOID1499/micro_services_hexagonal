@@ -2,7 +2,12 @@ import type { CartRepositoryType } from "../types/repository.type.js";
 
 
 const createCart = async (input:any):Promise<{}> =>{
-    return Promise.resolve({})
+    //conect to db
+    //perform db operations
+    return Promise.resolve({
+        message:"fake data",
+        input
+    })
 }
 
 const findCart = async (input:any):Promise<{}> =>{
