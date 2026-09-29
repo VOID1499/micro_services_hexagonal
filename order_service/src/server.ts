@@ -12,6 +12,12 @@ export const StartServer = async ()=> {
 
 }
 
+
+process.on("uncaughtException",async (err)=>{
+    console.log(err);
+    process.exit(1);
+})
+
 StartServer().then(()=>{
     console.log("ORDER_SERVICE ON!");
 })
