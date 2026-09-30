@@ -25,3 +25,7 @@
 /order_service/windsurf
 /order_service/coverage/
 /order_service/db-data/
+
+
+db/*
+!db/docker-compose.yml
