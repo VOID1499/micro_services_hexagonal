@@ -1,13 +1,18 @@
 import type { CartRepositoryType } from "../types/repository.type.js";
+import { DB } from "../db/db-connection.js";
+import { cartsTable } from "../db/schema.js"
 
 
 const createCart = async (input:any):Promise<{}> =>{
     //conect to db
     //perform db operations
-    return Promise.resolve({
-        message:"fake data",
-        input
-    })
+    const result = await DB.insert(cartsTable).values({
+        customerId:1234
+    }).returning({cartId:cartsTable.id})
+
+    return Promise.resolve({});
+
+
 }
 
 const findCart = async (input:any):Promise<{}> =>{
